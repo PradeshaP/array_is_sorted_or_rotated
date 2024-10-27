@@ -1,0 +1,43 @@
+class Solution {
+public:
+    bool check(vector<int>& nums) {
+        int n=nums.size();
+        vector<int>rotatedNums(n);
+        int pos,ct,res=1;
+        
+       for(pos=0;pos<100;pos++)
+       {
+        ct=0;
+        for(int i=0;i<n;i++)
+        {
+            rotatedNums[(i+pos)%n]=nums[i];
+        }
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n-i-1;j++)
+            {
+                if(rotatedNums[j]>rotatedNums[j+1])
+                {
+                    ct++;
+                    break;
+                }
+            }
+        }
+
+    
+     if(ct==0)
+     {
+        res=0;
+       break;
+     }
+       }
+       if(res==0)
+       return true;
+       else
+       return false;
+    }
+
+    
+    
+
+};
