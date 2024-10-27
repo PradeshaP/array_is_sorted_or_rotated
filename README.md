@@ -1,1 +1,1 @@
-# array_is_sorted_or_rotated
+This C++ program defines a class `Solution` with a method `check`, which checks if a given array of integers can be considered as a rotated sorted array. A rotated sorted array is an array that has been sorted in ascending order and then rotated at some pivot point.
